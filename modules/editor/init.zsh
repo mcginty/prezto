@@ -286,7 +286,7 @@ fi
 
 for keymap in 'emacs' 'viins'; do
   bindkey -M "$keymap" "$key_info[Home]" beginning-of-line
-  bindkey -M "$keymap" "$key_info[End]" end-of-line
+  #bindkey -M "$keymap" "$key_info[End]" end-of-line
 
   bindkey -M "$keymap" "$key_info[Insert]" overwrite-mode
   bindkey -M "$keymap" "$key_info[Delete]" delete-char

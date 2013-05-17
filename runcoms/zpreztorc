@@ -32,23 +32,22 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'prompt'
+  'prompt' \
+  'git'
 
 #
 # Editor
 #
-
 # Set the key mapping style to 'emacs' or 'vi'.
 zstyle ':prezto:module:editor' keymap 'emacs'
 
 # Auto convert .... to ../..
-# zstyle ':prezto:module:editor' dot-expansion 'yes'
+zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 #
 # Git
 #
-
-# Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
+# zstyle ':prezto:module:git:log:context' format 'oneline'
 # zstyle ':prezto:module:git:status:ignore' submodules 'all'
 
 #
@@ -82,10 +81,12 @@ zstyle ':prezto:module:editor' keymap 'emacs'
 # Prompt
 #
 
+source ~/.zprezto/get-short-path.zsh
+source ~/.zprezto/git-omz.zsh
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'agnoster'
 
 #
 # Screen
